@@ -4,8 +4,13 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        int resultado = dividir();
-        System.out.println(resultado);
+        try {
+            int resultado = dividir();
+            System.out.println(resultado);
+        } catch (ArithmeticException e) {
+            System.out.println(e.toString());
+            System.out.println("No se logra completar la divison.");
+        }
     }
     public static int dividir(){
         try {
